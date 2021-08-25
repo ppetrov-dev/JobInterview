@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\JobInterview\JobInterview.AssetExchanger\JobInterview.AssetExchanger.csproj" />
   </ItemGroup>
 

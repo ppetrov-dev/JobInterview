@@ -6,7 +6,12 @@ namespace JobInterview.AssetExchanger.Examples
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using var bootstrapper = new Bootstrapper();
+
+            bootstrapper.Run();
+
+            //if (bootstrapper.Container == null)
+            //    Console.WriteLine("Hello World!");
         }
     }
 }

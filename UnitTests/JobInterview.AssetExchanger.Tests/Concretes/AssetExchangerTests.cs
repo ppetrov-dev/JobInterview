@@ -1,8 +1,9 @@
 ﻿using FluentAssertions;
+using JobInterview.AssetExchanger.Abstractions;
 using Moq;
 using Xunit;
 
-namespace JobInterview.AssetExchanger.Tests
+namespace JobInterview.AssetExchanger.Tests.Concretes
 {
     public class AssetExchangerTests
     {
@@ -14,10 +15,10 @@ namespace JobInterview.AssetExchanger.Tests
             _exchanger = CreateExchanger();
         }
 
-        private readonly AssetExchanger _exchanger;
+        private readonly AssetExchanger.Concretes.AssetExchanger _exchanger;
         private readonly Mock<IConversionRateProvider> _conversionRateProviderMock;
 
-        private AssetExchanger CreateExchanger()
+        private AssetExchanger.Concretes.AssetExchanger CreateExchanger()
         {
             return new(_conversionRateProviderMock.Object);
         }

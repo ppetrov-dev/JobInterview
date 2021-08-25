@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
+using JobInterview.AssetExchanger.Abstractions;
 
-namespace JobInterview.AssetExchanger
+namespace JobInterview.AssetExchanger.Concretes
 {
     internal class ConversionRateProvider : IConversionRateProvider
     {

@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using FluentAssertions;
+using JobInterview.AssetExchanger.Abstractions;
+using JobInterview.AssetExchanger.Concretes;
 using Moq;
 using Xunit;
 
-namespace JobInterview.AssetExchanger.Tests
+namespace JobInterview.AssetExchanger.Tests.Concretes
 {
     public class ConversionRateProviderTests
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace JobInterview.AssetExchanger
+namespace JobInterview.AssetExchanger.Abstractions
 {
-    internal interface IIsReadyProvider
+    public interface IIsReadyProvider
     {
         bool IsReady { get; }
         event Action? IsReadyChanged;
