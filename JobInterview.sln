@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger", "JobInterview\JobInterview.AssetExchanger\JobInterview.AssetExchanger.csproj", "{D3A97F14-67CE-4407-B2A1-89431391B5C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobInterview.AssetExchanger", "JobInterview\JobInterview.AssetExchanger\JobInterview.AssetExchanger.csproj", "{D3A97F14-67CE-4407-B2A1-89431391B5C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger.Tests", "UnitTests\JobInterview.AssetExchanger.Tests\JobInterview.AssetExchanger.Tests.csproj", "{DAEA341F-8944-40EC-A211-8411FC7F784E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobInterview.AssetExchanger.Tests", "UnitTests\JobInterview.AssetExchanger.Tests\JobInterview.AssetExchanger.Tests.csproj", "{DAEA341F-8944-40EC-A211-8411FC7F784E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger.Examples", "JobInterview.AssetExchanger.Examples\JobInterview.AssetExchanger.Examples.csproj", "{3FF5A4DB-0822-4543-BAE8-E3F4C8087815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger.Examples.Tests", "UnitTests\JobInterview.AssetExchanger.Examples.Tests\JobInterview.AssetExchanger.Examples.Tests.csproj", "{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DAEA341F-8944-40EC-A211-8411FC7F784E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEA341F-8944-40EC-A211-8411FC7F784E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEA341F-8944-40EC-A211-8411FC7F784E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF5A4DB-0822-4543-BAE8-E3F4C8087815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF5A4DB-0822-4543-BAE8-E3F4C8087815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF5A4DB-0822-4543-BAE8-E3F4C8087815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF5A4DB-0822-4543-BAE8-E3F4C8087815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
