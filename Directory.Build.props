@@ -1,0 +1,23 @@
+﻿<Project>
+  <PropertyGroup>
+    <LangVersion>9</LangVersion>
+    <Nullable>enable</Nullable>
+    <TargetFramework>net5.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>CS0108,CS0162,CS0109,CS0219,CS0169,CS0628,CS8600,CS8602,CS8603,CS8604,CS8618,CS8625,CS8609,CS8613,NU1605,CS8714,CS8620,CS8612,CS8597,CS8614,CS8601,CS8610,CS8622,CS8619,CS8766,CS8767,CS8769,CS8002,CS0436,CS8632,CS8629</WarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <CopyLocalLockFileAssemblies>True</CopyLocalLockFileAssemblies>
+    <AppendRuntimeIdentifierToOutputPath>False</AppendRuntimeIdentifierToOutputPath>
+    <BaseOutputPath>..\..\bin</BaseOutputPath>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+</Project>

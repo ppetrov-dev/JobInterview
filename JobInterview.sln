@@ -11,6 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobInterview.AssetExchanger.Examples.Tests", "UnitTests\JobInterview.AssetExchanger.Examples.Tests\JobInterview.AssetExchanger.Examples.Tests.csproj", "{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{AF073046-3C08-4BBC-A008-E91C71267AAA}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{0A8505BE-51B6-48DB-AA1B-5951675BB852}"
+	ProjectSection(SolutionItems) = preProject
+		UnitTests\Directory.Build.props = UnitTests\Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +46,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAEA341F-8944-40EC-A211-8411FC7F784E} = {0A8505BE-51B6-48DB-AA1B-5951675BB852}
+		{CFA4F9D0-B580-47D5-95FB-6CD7B6204F94} = {0A8505BE-51B6-48DB-AA1B-5951675BB852}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FF83F07-CF39-4F62-A259-0117C920CF47}
