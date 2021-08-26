@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\JobInterview\JobInterview.AssetExchanger\JobInterview.AssetExchanger.csproj" />
+    <ProjectReference Include="..\JobInterview.TestUtils\JobInterview.TestUtils.csproj" />
   </ItemGroup>
 
 </Project>
