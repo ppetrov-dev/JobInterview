@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
+using JobInterview.AssetExchanger.Abstractions;
 
-namespace JobInterview.AssetExchanger
+namespace JobInterview.AssetExchanger.Concretes
 {
     internal class ConversionRateProvider : IConversionRateProvider
     {
@@ -22,6 +23,9 @@ namespace JobInterview.AssetExchanger
 
         public decimal? GetRate(IAsset fromAsset, IAsset toAsset)
         {
+            if (fromAsset == toAsset)
+                return 1m;
+
             if (!_symbolRepository.Items.Any())
                 return null;
 

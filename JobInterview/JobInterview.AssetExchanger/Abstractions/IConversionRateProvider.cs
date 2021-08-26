@@ -1,4 +1,4 @@
-﻿namespace JobInterview.AssetExchanger
+﻿namespace JobInterview.AssetExchanger.Abstractions
 {
     internal interface IConversionRateProvider : IIsReadyProvider
     {

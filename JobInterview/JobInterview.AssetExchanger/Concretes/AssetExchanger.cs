@@ -1,6 +1,7 @@
 ﻿using System;
+using JobInterview.AssetExchanger.Abstractions;
 
-namespace JobInterview.AssetExchanger
+namespace JobInterview.AssetExchanger.Concretes
 {
     internal class AssetExchanger : IAssetExchanger
     {

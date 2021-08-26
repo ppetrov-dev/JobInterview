@@ -1,6 +1,6 @@
-﻿namespace JobInterview.AssetExchanger
+﻿namespace JobInterview.AssetExchanger.Abstractions
 {
-    internal interface ISymbol
+    public interface ISymbol
     {
         IAsset BaseAsset { get; }
         IAsset QuoteAsset { get; }

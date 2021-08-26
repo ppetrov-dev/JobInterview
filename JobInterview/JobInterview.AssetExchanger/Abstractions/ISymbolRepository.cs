@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JobInterview.AssetExchanger
+namespace JobInterview.AssetExchanger.Abstractions
 {
     internal interface ISymbolRepository : IIsReadyProvider
     {

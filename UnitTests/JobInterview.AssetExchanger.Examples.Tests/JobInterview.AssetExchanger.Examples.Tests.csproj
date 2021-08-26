@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\JobInterview\JobInterview.AssetExchanger\JobInterview.AssetExchanger.csproj" />
+    <ProjectReference Include="..\..\JobInterview.AssetExchanger.Examples\JobInterview.AssetExchanger.Examples.csproj" />
     <ProjectReference Include="..\JobInterview.TestUtils\JobInterview.TestUtils.csproj" />
   </ItemGroup>
 
