@@ -2,7 +2,7 @@
 
 namespace JobInterview.AssetExchanger.Abstractions
 {
-    public interface ISymbolRepository : IIsReadyProvider
+    internal interface ISymbolRepository : IIsReadyProvider
     {
         IEnumerable<ISymbol> Items { get; }
     }

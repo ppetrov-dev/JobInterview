@@ -12,14 +12,17 @@ namespace JobInterview.AssetExchanger.Concretes
             task.ContinueWith(OnTaskCallback, cancellationToken);
         }
 
-        public event Action<TResult>? Succeeded;
+        public TResult? Result { get; private set; }
+        public event Action? Succeeded;
 
         private void OnTaskCallback(Task<TResult> task)
         {
             if (!task.IsCompletedSuccessfully)
                 return;
 
-            Succeeded?.Invoke(task.Result);
+            Result = task.Result;
+
+            Succeeded?.Invoke();
         }
     }
 }

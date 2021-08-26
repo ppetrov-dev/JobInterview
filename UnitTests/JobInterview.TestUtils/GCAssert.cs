@@ -5,7 +5,7 @@ namespace JobInterview.TestUtils
 {
     public static class GCAssert
     {
-        public static void AssertCollectedAfterDispose<T>(Func<T> objectFactory)
+        public static void AssertCollectedAfterDispose<T>(Func<T> objectFactory, Action afterDispose = null)
             where T : class, IDisposable
         {
             WeakReference weakReference = null;
@@ -15,6 +15,7 @@ namespace JobInterview.TestUtils
                     var target = objectFactory();
                     weakReference = new WeakReference(target);
                     target.Dispose();
+                    afterDispose?.Invoke();
                 })();
 
             GC.Collect();
