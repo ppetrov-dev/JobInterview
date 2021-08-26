@@ -2,7 +2,7 @@
 
 namespace JobInterview.AssetExchanger.Abstractions
 {
-    internal interface ICancellationTokenSourceFactory
+    public interface ICancellationTokenSourceFactory
     {
         CancellationTokenSource Create();
     }

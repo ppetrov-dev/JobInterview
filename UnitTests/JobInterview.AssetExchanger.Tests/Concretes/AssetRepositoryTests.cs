@@ -35,6 +35,11 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
                 _cancellationTokenSourceFactoryMock.Object);
         }
 
+        private static IAsset CreateAsset(long id)
+        {
+            return Mock.Of<IAsset>(asset => asset.Id == id);
+        }
+
         [Fact]
         public void CreatesCancellationTokenSourceInCtor()
         {
@@ -88,7 +93,7 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
             const long id = 100500;
             var repository = CreateRepository();
             _getAssetsTaskPromiseMock.Setup(promise => promise.Result)
-                .Returns(new[] { Mock.Of<IAsset>(asset => asset.Id == id) });
+                .Returns(new[] { CreateAsset(id) });
 
             _getAssetsTaskPromiseMock.Raise(promise => promise.Succeeded += null);
 
@@ -102,7 +107,7 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
         {
             var repository = CreateRepository();
             _getAssetsTaskPromiseMock.Setup(promise => promise.Result)
-                .Returns(new[] { Mock.Of<IAsset>(asset => asset.Id == 100500) });
+                .Returns(new[] { CreateAsset(100500) });
 
             _getAssetsTaskPromiseMock.Raise(promise => promise.Succeeded += null);
 
@@ -114,7 +119,7 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
         [Fact]
         public void ResolvesAssetWhenRepositoryIsReady()
         {
-            var expectedAsset = Mock.Of<IAsset>(asset => asset.Id == 100500);
+            var expectedAsset = CreateAsset(100500);
             var repository = CreateRepository();
             _getAssetsTaskPromiseMock.Setup(promise => promise.Result)
                 .Returns(new[] { expectedAsset });
@@ -148,6 +153,20 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
         public void CollectedByGCAfterDispose()
         {
             GCAssert.AssertCollectedAfterDispose(CreateRepository, () => _getAssetsTaskPromiseMock.Invocations.Clear());
+        }
+
+        [Fact]
+        public void SetsItemsOnGetAssetsTaskPromiseSucceeded()
+        {
+            var expectedAssets = new[] { CreateAsset(1), CreateAsset(2), CreateAsset(3) };
+            var repository = CreateRepository();
+
+            _getAssetsTaskPromiseMock.Setup(promise => promise.Result)
+                .Returns(expectedAssets);
+
+            _getAssetsTaskPromiseMock.Raise(promise => promise.Succeeded += null);
+
+            repository.Items.Should().Equal(expectedAssets);
         }
     }
 }

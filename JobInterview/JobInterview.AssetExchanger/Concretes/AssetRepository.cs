@@ -11,7 +11,7 @@ namespace JobInterview.AssetExchanger.Concretes
     {
         private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly ITaskPromise<IAsset[]> _getAssetsTaskPromise;
-        private Dictionary<long, IAsset>? _assetsDictionary;
+        private Dictionary<long, IAsset> _assetsDictionary = new();
 
         public AssetRepository(IAssetsRequester assetsRequester, ICancellationTokenSourceFactory cancellationTokenSourceFactory)
         {
@@ -21,20 +21,19 @@ namespace JobInterview.AssetExchanger.Concretes
             _getAssetsTaskPromise.Succeeded += OnSucceeded;
         }
 
+        public IEnumerable<IAsset> Items => _assetsDictionary.Values;
+
         public bool IsReady { get; private set; }
 
         public event Action? IsReadyChanged;
 
         public bool Contains(long id)
         {
-            return _assetsDictionary?.ContainsKey(id) ?? false;
+            return _assetsDictionary.ContainsKey(id);
         }
 
         public IAsset Resolve(long id)
         {
-            if (_assetsDictionary == null)
-                throw new KeyNotFoundException($"Asset with #{id} was not found in the repository");
-
             return _assetsDictionary[id];
         }
 
