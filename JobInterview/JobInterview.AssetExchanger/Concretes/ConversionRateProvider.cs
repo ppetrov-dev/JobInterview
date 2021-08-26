@@ -23,6 +23,9 @@ namespace JobInterview.AssetExchanger.Concretes
 
         public decimal? GetRate(IAsset fromAsset, IAsset toAsset)
         {
+            if (fromAsset == toAsset)
+                return 1m;
+
             if (!_symbolRepository.Items.Any())
                 return null;
 

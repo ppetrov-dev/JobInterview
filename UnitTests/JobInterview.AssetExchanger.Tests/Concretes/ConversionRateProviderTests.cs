@@ -70,7 +70,7 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
         }
 
         [Fact]
-        public void GetsRateUsingRateWithDirectStrategy()
+        public void GetsRateUsingDirectStrategy()
         {
             var asset1 = CreateAsset();
             var asset2 = CreateAsset();
@@ -83,7 +83,7 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
         }
 
         [Fact]
-        public void GetsRateUsingRateWithReverseStrategy()
+        public void GetsRateUsingReverseStrategy()
         {
             var asset1 = CreateAsset();
             var asset2 = CreateAsset();
@@ -117,6 +117,17 @@ namespace JobInterview.AssetExchanger.Tests.Concretes
             var actualRate = _provider.GetRate(asset2, asset1);
 
             actualRate.Should().BeNull("mathematics disallows division by zero because the resulting answer is indeterminate");
+        }
+
+        [Fact]
+        public void GetsRateForTheSameAssets()
+        {
+            var asset = CreateAsset();
+            const decimal expectedRate = 1m;
+
+            var actualRate = _provider.GetRate(asset, asset);
+
+            actualRate.Should().Be(expectedRate);
         }
     }
 }
