@@ -4,11 +4,13 @@ namespace JobInterview.AssetExchanger.Concretes
 {
     internal class Asset : IAsset
     {
-        public Asset(string name)
+        public Asset(long id, string name)
         {
             Name = name;
+            Id = id;
         }
 
+        public long Id { get; }
         public string Name { get; }
     }
 }

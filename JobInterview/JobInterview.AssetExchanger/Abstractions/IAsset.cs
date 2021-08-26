@@ -2,6 +2,7 @@
 {
     public interface IAsset
     {
+        long Id { get; }
         string Name { get; }
     }
 }
